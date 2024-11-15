@@ -1,0 +1,1 @@
+# nonebot-plugin-kindness-lesson
