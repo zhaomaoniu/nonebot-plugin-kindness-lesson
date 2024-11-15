@@ -25,7 +25,7 @@ __plugin_meta__ = PluginMetadata(
     description="一句话生成恩情课文",
     usage="恩情课文 <主题>",
     type="application",
-    homepage="https://github.com/zhaomaoniu/nonebot-kindness-lesson",
+    homepage="https://github.com/zhaomaoniu/nonebot-plugin-kindness-lesson",
     config=Config,
 )
 
