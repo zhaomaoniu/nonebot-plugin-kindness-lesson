@@ -105,7 +105,7 @@ async def _(args: Message = CommandArg()):
 
 @matcher.got(
     "theme",
-    prompt="请输入主题！完整的句子或关键词皆可\n示例：\n	金正日爷爷使用石头击落美国间谍卫星\n	Python爷爷",
+    prompt="请输入主题！完整的句子或关键词皆可\n示例：\n	桐谷和人用超越系统限制的一击击落茅场晶彦\n	Python爷爷",
 )
 async def got_theme(theme: str = ArgPlainText()):
     try:
