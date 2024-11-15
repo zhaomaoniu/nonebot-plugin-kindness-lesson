@@ -1,7 +1,8 @@
-from openai import AsyncOpenAI
 from httpx import AsyncClient
+from openai import AsyncOpenAI
 from nonebot import on_command
 from nonebot.compat import PYDANTIC_V2
+from nonebot.plugin import PluginMetadata
 from nonebot.internal.adapter import Message
 from nonebot.exception import MatcherException
 from nonebot.params import CommandArg, ArgPlainText
@@ -17,6 +18,16 @@ else:
     from nonebot import get_driver
 
     plugin_config = Config.parse_obj(get_driver().config)
+
+
+__plugin_meta__ = PluginMetadata(
+    name="恩情课文",
+    description="一句话生成恩情课文",
+    usage="恩情课文 <主题>",
+    type="application",
+    homepage="https://github.com/zhaomaoniu/nonebot-kindness-lesson",
+    config=Config,
+)
 
 
 client = AsyncOpenAI(
