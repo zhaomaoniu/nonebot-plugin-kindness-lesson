@@ -1,6 +1,6 @@
 [project]
 name = "nonebot-plugin-kindness-lesson"
-version = "0.1.0"
+version = "0.1.1"
 description = "NoneBot 恩情课文生成插件 / Kindness Lesson Generating Plugin for NoneBot"
 authors = [
     {name = "zhaomaoniu", email = "2667292003@qq.com"},
