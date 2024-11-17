@@ -1,23 +1,15 @@
 from httpx import AsyncClient
 from openai import AsyncOpenAI
-from nonebot import on_command
-from nonebot.compat import PYDANTIC_V2
 from nonebot.plugin import PluginMetadata
 from nonebot.internal.adapter import Message
 from nonebot.exception import MatcherException
+from nonebot import on_command, get_plugin_config
 from nonebot.params import CommandArg, ArgPlainText
 
 from .config import Config
 
 
-if PYDANTIC_V2:
-    from nonebot import get_plugin_config
-
-    plugin_config = get_plugin_config(Config)
-else:
-    from nonebot import get_driver
-
-    plugin_config = Config.parse_obj(get_driver().config)
+plugin_config = get_plugin_config(Config)
 
 
 __plugin_meta__ = PluginMetadata(
@@ -26,6 +18,7 @@ __plugin_meta__ = PluginMetadata(
     usage="恩情课文 <主题>",
     type="application",
     homepage="https://github.com/zhaomaoniu/nonebot-plugin-kindness-lesson",
+    supported_adapters=None,
     config=Config,
 )
 
